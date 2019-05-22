@@ -1,0 +1,80 @@
+@mixin pos($type,$top,$left) {
+  position: $type;
+  left: $left;
+  top: $top;
+}
+@mixin dem($width,$height) {
+  width: $width;
+  height: $height;
+}
+$color: #3429ff;
+$headerColor: #def1ca;
+$white: #ffffff;
+
+#clip {
+  background-color: $color;
+  @include dem(100%,100%);
+  @include pos(fixed,50%,50%);
+  transform: translate(-50%,-50%);
+  clip-path: polygon(0 0, 72% 0, 53% 100%, 0% 100%);
+  transition: background-color 1s;
+  z-index: -1;
+}
+
+header {
+  font-size: 80px;
+  color: $white;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 140px;
+  margin-top: 15px;
+  margin-left: 80px;
+  text-shadow: 10px 10px 30px #919191;
+  color: $white;
+}
+
+h3 {
+  @extend h1;
+  text-shadow: none;
+  font-size: 60px;
+  margin-left: 180px;
+  text-transform: capitalize;
+  font-family: montserrat;
+}
+
+button {
+  @include pos(relative,100px,300px);
+  @include dem(300px,100px);
+  border-color: transparent;
+  background-color: $headerColor;
+  border-radius: 15px;
+  font-size: 30px;
+  font-family: cursive;
+  text-transform: uppercase;
+}
+
+#info {
+  background-color: $white;
+  @include dem(30%,40%);
+  @include pos(absolute,35%,53%);
+  box-shadow: 0 10px 30px #b8b8b8;
+  border-color: transparent;
+
+  span {
+    display: block;
+    margin-top: 12%;
+    width: 30px;
+    height:30px;
+    background-color: #03072f;
+    border-radius: 13px;
+    margin-left: 3%;
+
+    strong{
+      margin-left: 200%;
+      font-family: Montserrat;
+    }
+  }
+  border-radius: 15px;
+}
