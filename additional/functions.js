@@ -36,3 +36,22 @@ function spriting(img, SpriteWidth, SpriteHeight, DeletedInTheEnd = 0, H_or_V = 
 	}
 	return data;
 }
+//sorting
+function sortArr(arr,isReversed=false,newArray=false){
+	if(newArray){
+		let arr1=[...arr];
+		if(!isReversed){
+			arr1.sort((a,b)=>a-b)
+		}else{
+			arr1.sort((a,b)=>b-a)
+		}
+		return arr1
+	}else{
+		if(!isReversed){
+			arr.sort((a,b)=>a-b)
+		}else{
+			arr.sort((a,b)=>b-a)
+
+		}
+	}
+}
