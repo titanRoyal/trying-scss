@@ -7,8 +7,6 @@
   width: $width;
   height: $height;
 }
-
-
 $color: #3429ff;
 $headerColor: #def1ca;
 $white: #ffffff;
@@ -30,24 +28,25 @@ header {
 }
 
 h1 {
-  font-size: 140px;
+  font-size: 100px;
   margin-top: 15px;
   margin-left: 80px;
   text-shadow: 10px 10px 30px #919191;
   color: $white;
+  font-family: Roboto Mono;
 }
 
 h3 {
   @extend h1;
   text-shadow: none;
-  font-size: 60px;
-  margin-left: 180px;
+  font-size: 40px;
+  margin-left: 80px;
   text-transform: capitalize;
   font-family: montserrat;
 }
 
 button {
-  @include pos(relative,100px,300px);
+  @include pos(relative,0,30%);
   @include dem(300px,100px);
   border-color: transparent;
   background-color: $headerColor;
@@ -68,12 +67,12 @@ button {
     display: block;
     margin-top: 12%;
     width: 30px;
-    height:30px;
+    height: 30px;
     background-color: #03072f;
     border-radius: 13px;
     margin-left: 3%;
 
-    strong{
+    strong {
       margin-left: 200%;
       font-family: Montserrat;
     }
